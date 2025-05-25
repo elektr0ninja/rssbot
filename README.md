@@ -1,9 +1,21 @@
 # rssbot
-RSS Feed parser for your Telegram bot:
+Get notified if your favourite RSS channels publish new topic.
 
-Get notified if your favourite RSS channels publish new topic optionally filtered by keywords.
+I wanted to buy a used SteamDeck on a second-hand hardvare marketplace, and I wanted to get notified about the new deals automatically.
+This insipered me to put this little script together:
 
-Requirements
+RSS Feed parser for your Telegram bot.
 
-1) Telegram bot
-2) Feedparser python package
+
+## Requirements
+1) A Telegram bot TOKEN and a chat id, HOWTO: [https://gist.github.com/nafiesl/4ad622f344cd1dc3bb1ecbe468ff9f8a]
+   
+2) Feedparser and some basic python packages, take a look into the rssbot.py includes.
+
+## Usage
+Fill the config section of the script with your telegram bot token and the chate id to whom you would like to send the messages, add rss feed urls, and a keyword.
+If you don't want to filter the topics, then choose your keyword wisely ;)
+
+Finnaly, schedule the script to run periodically, and your telegram bot will send you the new topics. :)
+
+If you find this tool useful, feel free to buy me a coffee: [buymeacoffee.com/elektr0ninja]
