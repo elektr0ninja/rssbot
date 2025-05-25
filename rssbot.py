@@ -15,7 +15,7 @@ feeds = ("https://sample1.com/rss.xml",
 marker_file = "marker.dat"
 BOT_TOKEN = "PUT_YOUR_BOT_TOKEN_HERE"
 chat_id = "CHAT_ID_FOR_YOUR_USER"
-keyword = "KEYWORD_TO_GET_NOTIFIED_ABOUT"
+keywords = ("keyword1","keyword2","keyword3","keyword4")
 ###########################
 
 # Load last check time from the marker file
@@ -37,7 +37,11 @@ for f in feeds:
         published = datetime.strptime(publishedstr,"%d %b %Y %H:%M:%S")
         if published > lastcheck:
             print(f" New item found: {s.title} {s.link}")
-            if keyword in s.title:
+            interesting = False
+            for kw in keywords:
+                if kw in s.title.tolower():
+                    interesting = True
+            if interesting:
                 message = urllib.parse.quote_plus(f"RSSbot: {s.title} {s.link}")
                 url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage?chat_id={chat_id}&text={message}"
                 requests.get(url)
