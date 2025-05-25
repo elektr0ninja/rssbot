@@ -18,4 +18,4 @@ If you don't want to filter the topics, then choose your keyword wisely ;)
 
 Finnaly, schedule the script to run periodically, and your telegram bot will send you the new topics. :)
 
-If you find this tool useful, feel free to buy me a coffee: [buymeacoffee.com/elektr0ninja]
+If you find this tool useful, feel free to buy me a coffee: [https://buymeacoffee.com/elektr0ninja]
