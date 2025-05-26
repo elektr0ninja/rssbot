@@ -39,7 +39,7 @@ for f in feeds:
             print(f" New item found: {s.title} {s.link}")
             interesting = False
             for kw in keywords:
-                if kw in s.title.tolower():
+                if kw in s.title.lower():
                     interesting = True
             if interesting:
                 message = urllib.parse.quote_plus(f"RSSbot: {s.title} {s.link}")
