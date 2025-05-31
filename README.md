@@ -13,7 +13,7 @@ RSS Feed parser for your Telegram bot.
 2) Feedparser and some basic python packages, take a look into the rssbot.py includes.
 
 ## Usage
-Fill the config section of the script with your telegram bot token and the chate id to whom you would like to send the messages, add rss feed urls, and at least one keyword.
+Fill the config section of the script with your telegram bot token, the chat id to whom you would like to send the messages, add rss feed urls, and at least one keyword.
 If you don't want to filter the topics, then choose your keyword wisely ;)
 
 Finnaly, schedule the script to run periodically, and your telegram bot will send you the new topics. :)
